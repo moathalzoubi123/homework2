@@ -75,13 +75,27 @@ print(users["Erik"]["lottery_numbers"])
 
 print(users["Avril"]["pets"][0]["species"]) 
 
-print(users["Erik"]["lottery_numbers"][2])
+users["Erik"]["lottery_numbers"].sort()
+
+print(users["Erik"]["lottery_numbers"][0])
+
+print(min(users["Erik"]["lottery_numbers"]))
 
 
 # users["Erik"][("lottery_numbers")]
 
 # users.update()
 
+numbers = users["Avril"]["lottery_numbers"]
+even_numbers = []
+for number in numbers:
+  if number % 2 == 0:
+    even_numbers.append(number)
+
+
+
+users["Erik"]["lottery_numbers"].append(7)
+print(users["Erik"]["lottery_numbers"]) 
 
 
 users["Erik"]["home_town"] = "Edinburgh"
@@ -90,7 +104,7 @@ print(users["Erik"]["home_town"])
 # q = int({
 #   "name" : "fluffy",
 #   "species": "dog"
-#   })
+#   }
 
 # users(["Erik"]["pets"]).append(q)
 
@@ -98,6 +112,12 @@ print(users["Erik"]["home_town"])
 #   "name" : "fluffy",
 #   "species": "dog"
 #   }) 
+
+new_pets= {
+  "name" : "fluffy",
+  "species": "dog"}
+users["Erik"]["pets"].append(new_pets)
+
 
 
 users.update({"moath": {
